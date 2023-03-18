@@ -1,0 +1,21 @@
+.featureCon {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+    align-items: flex-start;
+    justify-content: center;
+    min-width: 200px;
+  }
+  .imgCategory img {
+    height: 100%;
+    object-fit: contain;
+  }
+  .prices{
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    color:rgb(153, 5, 5)
+  }
+  .prices h1{
+    margin-right: 10px;
+  }

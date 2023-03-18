@@ -1,0 +1,141 @@
+.nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 120px;
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+.language{
+  font-size: 24px;
+}
+.sale {
+  width: 100%;
+  background-color: #2d2f87;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  height: 30px;
+}
+.searchInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;
+}
+.store {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.search {
+  width: 30%;
+  height: 50px;
+  border: 1px solid #CBCBCB;
+  padding-left: 20px;
+  border-radius: 15px;
+}
+.search input {
+  height: 100%;
+  width: 89%;
+  border: none;
+}
+.cartinfo span {
+  margin-left: 15px;
+}
+
+.ulContainer {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  align-items: center;
+  height: 35px;
+}
+.store1{
+  display: flex;
+  align-items: center;
+}
+.store1 img{
+  margin-right: 5px;
+}
+.myUl {
+  display: flex;
+  list-style: none;
+}
+.myUl li {
+  margin-right: 50px;
+}
+.ulMobileCon {
+  display: none;
+}
+
+@media only screen and (max-width: 1068px) {
+  .language {
+    display: none;
+  }
+  .searchInfo {
+    margin: 20px 0;
+  }
+  .myUl {
+    display: none;
+  }
+  .store {
+    display: none;
+  }
+  .toggler {
+    display: block;
+  }
+  .ulContainer {
+    background: #fff;
+  }
+  .searchinput {
+    display: block;
+    height: 100%;
+    width: 70%;
+    border-radius: 10px;
+  }
+  .searchinput input {
+    height: 100%;
+    width: 89%;
+  }
+  .search {
+    display: none;
+  }
+  .ulMobileCon {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+  }
+  .ulMobile {
+    width: 100%;
+    height: 100%;
+    flex: 2;
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  .darkSide {
+    flex: 0.5;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.5;
+  }
+  .ulMobile ul li {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1068px) {
+  .searchinput {
+    display: none;
+  }
+  .toggler {
+    display: none;
+  }
+}

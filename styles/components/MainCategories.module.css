@@ -1,0 +1,21 @@
+.categoryCon {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.imgCategory img {
+  height: 100%;
+  object-fit: contain;
+}
+.brand {
+  border: 1px solid;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 150px;
+  display: flex;
+  background-color: #2d2f7d;
+  border-radius: 50%;
+}

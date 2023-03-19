@@ -39,8 +39,7 @@ const MainCategories = ({ category, brands }) => {
       }
     ]
   };
-  console.log(brands)
-  console.log(category);
+  
   return (
     <Slider {...settings} style={{width:"95%",margin:"40px auto"}}>
       {category?.map(({ image, name,id }) => {

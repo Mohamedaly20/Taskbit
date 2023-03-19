@@ -20,7 +20,6 @@ export default function Home({ data, category, brandsItems, fearuredItems }) {
       </Head>
       <Slider1 data={data[0].image} />
       <h2 className={styles.title}>Main Categories</h2>
-      {console.log(category)}
       <MainCategories category={category} />
       <img src="../assets/sales.png" className={styles.sale} />
       <img
@@ -28,8 +27,6 @@ export default function Home({ data, category, brandsItems, fearuredItems }) {
         style={{ width: "100%", objectFit: "contain" }}
         className={styles.salemob}
       />
-
-    
             <MainCategories category={brandsItems} brands={true}/>
         
       <img src="../assets/blackNovember.png" style={{ width: "100%" }} />

@@ -77,6 +77,7 @@ const NavBar = () => {
               <li>Sports</li>
               <li>Accesories</li>
               <li>sale</li>
+              <li>العربية</li>
             </ul>
           </div>
           <div

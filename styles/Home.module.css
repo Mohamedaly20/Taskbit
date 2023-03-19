@@ -20,6 +20,7 @@
 }
 .sales img {
   margin-bottom: 20px;
+  width: 45%;
 }
 .ItemsCon {
   -ms-overflow-style: none; /* IE and Edge */
@@ -32,6 +33,7 @@
   width: 100%;
   object-fit: contain;
   margin-bottom: 30px;
+  display: flex;
 }
 .title {
   color: #2d2f78;
@@ -42,7 +44,6 @@
   .sales img {
     width: 100%;
     object-fit: contain;
-    border: 1px solid green;
   }
   .sale {
     display: none;

@@ -5,3 +5,8 @@
 ul{
     list-style: none;
 }
+.slick-prev:before, .slick-next:before{
+    color:#30327F !important;
+    background-color: transparent !important;
+    
+  }

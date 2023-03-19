@@ -20,11 +20,8 @@ export default function Home({ data, category, brandsItems, fearuredItems }) {
       </Head>
       <Slider1 data={data[0].image} />
       <h2 className={styles.title}>Main Categories</h2>
-      <div className={styles.ItemsCon}>
-        {category.map(({ image, name }) => {
-          return <MainCategories image={image} title={name} />;
-        })}
-      </div>
+      {console.log(category)}
+      <MainCategories category={category} />
       <img src="../assets/sales.png" className={styles.sale} />
       <img
         src="../assets/image1mobile.png"
@@ -32,48 +29,26 @@ export default function Home({ data, category, brandsItems, fearuredItems }) {
         className={styles.salemob}
       />
 
-      <div className={styles.ItemsCon}>
-        {brandsItems.map(({ image }) => {
-          return (
-            <MainCategories image={image} title="Up to 40%" brands={true} />
-          );
-        })}
-      </div>
+    
+            <MainCategories category={brandsItems} brands={true}/>
+        
       <img src="../assets/blackNovember.png" style={{ width: "100%" }} />
       <h1 className={styles.title}>Featured Items</h1>
-      <div className={styles.ItemsCon}>
-        {fearuredItems.map(({ image, price_after_sale, price_before_sale }) => {
-          return (
-            <Featured
-              image={image}
-              priceAfter={price_after_sale}
-              priceBefore={price_before_sale}
-            />
-          );
-        })}
-      </div>
+
+      <Featured featured={fearuredItems} />
+
       <h1 className={styles.title}>Most Viewed</h1>
 
-      <div className={styles.ItemsCon}>
-        {fearuredItems.map(({ image, price_after_sale, price_before_sale }) => {
-          return (
-            <Featured
-              image={image}
-              priceAfter={price_after_sale}
-              priceBefore={price_before_sale}
-            />
-          );
-        })}
-      </div>
+      <Featured featured={fearuredItems} />
+
       <div className={styles.sales}>
         <img src="../assets/image1.png" alt="" />
         <img src="../assets/image2.png" alt="" />
       </div>
-    
     </>
   );
 }
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
   try {
     const result = await axios.get(
       "https://api-task.bit68.com/en/api/slider_image/"

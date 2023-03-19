@@ -14,8 +14,13 @@
     display: flex;
     align-items: center;
     height: fit-content;
-    color:rgb(153, 5, 5)
   }
   .prices h1{
     margin-right: 10px;
+  }
+  .redCol{
+    color: red;
+  }
+  .blueCol{
+    color: #30327f;
   }

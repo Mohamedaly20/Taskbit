@@ -1,9 +1,9 @@
 .categoryCon {
   display: flex;
   flex-direction: column;
-  margin-right: 10px;
   align-items: center;
   justify-content: center;
+  margin: 0;
 }
 .imgCategory img {
   height: 100%;

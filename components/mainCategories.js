@@ -3,6 +3,7 @@ import styles from "../styles/components/MainCategories.module.css";
 import "slick-carousel/slick/slick.css";
 import '../styles/components/MainCategories.module.css'
 import Slider from "react-slick";
+import CategoryComponent from "./CategoryComponent";
 const MainCategories = ({ category, brands }) => {
   var settings = {
     dots: true,
@@ -38,25 +39,13 @@ const MainCategories = ({ category, brands }) => {
       }
     ]
   };
+  console.log(brands)
   console.log(category);
   return (
     <Slider {...settings} style={{width:"95%",margin:"40px auto"}}>
-      {category?.map(({ image, name }) => {
+      {category?.map(({ image, name,id }) => {
         return (
-          <div className={styles.categoryCon}>
-            <div
-              className={`${
-                brands
-                  ? `${(styles.imgCategory, styles.brand)}`
-                  : styles.imgCategory
-              }`}
-            >
-              <img src={image} />
-            </div>
-            <div className={styles.title}>
-              <h3 >{name}</h3>
-            </div>
-          </div>
+        <CategoryComponent image={image} name={name} brands={brands} key={id}/>
         );
       })}
     </Slider>

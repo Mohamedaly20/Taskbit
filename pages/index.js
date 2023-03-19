@@ -6,7 +6,7 @@ import NavBar from "@/layout/NavBar";
 import axios from "axios";
 import Slider1 from "@/components/Slider1";
 import MainCategories from "@/components/mainCategories";
-import Featured from "@/components/Featured";
+import Featured from "@/components/FeaturedSlider";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home({ data, category, brandsItems, fearuredItems }) {

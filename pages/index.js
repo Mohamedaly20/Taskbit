@@ -39,27 +39,37 @@ export default function Home({ data, category, brandsItems, fearuredItems }) {
           );
         })}
       </div>
-      <img src="../assets/blackNovember.png" style={{width:"100%"}}/>
+      <img src="../assets/blackNovember.png" style={{ width: "100%" }} />
       <h1 className={styles.title}>Featured Items</h1>
       <div className={styles.ItemsCon}>
-        {fearuredItems.map(({ image }) => {
-          return <Featured image={image} />;
+        {fearuredItems.map(({ image, price_after_sale, price_before_sale }) => {
+          return (
+            <Featured
+              image={image}
+              priceAfter={price_after_sale}
+              priceBefore={price_before_sale}
+            />
+          );
         })}
       </div>
       <h1 className={styles.title}>Most Viewed</h1>
 
       <div className={styles.ItemsCon}>
-        {fearuredItems.map(({ image }) => {
-          return <Featured image={image} />;
+        {fearuredItems.map(({ image, price_after_sale, price_before_sale }) => {
+          return (
+            <Featured
+              image={image}
+              priceAfter={price_after_sale}
+              priceBefore={price_before_sale}
+            />
+          );
         })}
       </div>
       <div className={styles.sales}>
         <img src="../assets/image1.png" alt="" />
         <img src="../assets/image2.png" alt="" />
       </div>
-      {console.log(category)}
-      {console.log(fearuredItems)}
-      {console.log(brandsItems)}
+    
     </>
   );
 }

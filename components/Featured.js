@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../styles/components/Featured.module.css";
-const Featured = ({ image }) => {
+const Featured = ({ image,priceAfter,priceBefore }) => {
   return (
     <div className={styles.featureCon}>
       <div className={styles.imgCategory}>
@@ -8,8 +8,8 @@ const Featured = ({ image }) => {
       </div>
       <h2> Nike Jordan Kids Air Jordan 4</h2>
       <div className={styles.prices}>
-        <h1>Egp 1500</h1>
-        <span>save 340</span>
+        <h1>Egp {priceAfter}</h1>
+        <span>save {priceBefore-priceAfter}</span>
       </div>
     </div>
   );
